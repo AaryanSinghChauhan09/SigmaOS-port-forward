@@ -1,4 +1,6 @@
-# Port Forwarding — Omarchy bar widget
+# fk-omarchy-port-forward-plugin
+
+> Forked from omacom/omarchy-port-forward-plugin (MIT). See `SIGMAOS_FORK.md`.
 
 A little bar widget for managing SSH port forwards without keeping a terminal
 open. Define forwards once, then flip them on/off from the bar.
