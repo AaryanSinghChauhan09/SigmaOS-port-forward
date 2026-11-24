@@ -90,7 +90,7 @@ cases from the unit's journal and surfaces them instead of sitting on
 
 ## Where state lives
 
-Forward definitions are stored in `~/.config/omarchy/port-forwards.json`
+Forward definitions are stored in `~/.config/sigmaos/port-forwards.json`
 (watched, so hand-edits show up live). Which tunnels are currently running is
 owned by **systemd** — the widget polls `systemctl --user is-active` (plus an
 `ss` check that the local port is really listening) and reconciles on startup,
