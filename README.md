@@ -1,4 +1,4 @@
-# fk-omarchy-port-forward-plugin
+# SigmaOS port-forward-plugin
 
 > Forked from AaryanSinghChauhan09/SigmaOS-port-forward-plugin (MIT). See `SIGMAOS_FORK.md`.
 
@@ -10,7 +10,7 @@ open. Define forwards once, then flip them on/off from the bar.
 ## Install
 
 ```
-omarchy plugin add https://github.com/SigmaOS-io/omarchy-port-forward-plugin.git --enable
+omarchy plugin add https://github.com/SigmaOS-io/sigmaos-port-forward-plugin.git --enable
 ```
 
 Enable/disable later, or remove entirely, with:
@@ -22,7 +22,7 @@ omarchy plugin remove port-forward
 ```
 
 Each tunnel runs inside a **transient systemd user service**
-(`omarchy-pf-<id>.service`, launched with `systemd-run --user`), not as a child
+(`sigmaos-pf-<id>.service`, launched with `systemd-run --user`), not as a child
 of the shell. That means a tunnel **survives a shell reload or crash** — and on
 startup the widget reconciles its state against systemd, so a tunnel that
 outlived the shell is picked back up as "active" instead of being orphaned and
@@ -101,9 +101,9 @@ that's already running from a previous session).
 Manage the units directly if you ever need to:
 
 ```
-systemctl --user list-units 'omarchy-pf-*'
-systemctl --user stop omarchy-pf-<id>
-journalctl --user -u omarchy-pf-<id>
+systemctl --user list-units 'sigmaos-pf-*'
+systemctl --user stop sigmaos-pf-<id>
+journalctl --user -u sigmaos-pf-<id>
 ```
 
 ## Requirements
@@ -121,12 +121,12 @@ doesn't, run `systemctl --user import-environment SSH_AUTH_SOCK`.
 ## IPC (scriptable from a keybind)
 
 ```
-omarchy-shell port-forward open
-omarchy-shell port-forward list
-omarchy-shell port-forward statuses
-omarchy-shell port-forward on <id|label|localPort>
-omarchy-shell port-forward off <id|label|localPort>
-omarchy-shell port-forward toggleForward <id|label|localPort>
+sigmaos-shell port-forward open
+sigmaos-shell port-forward list
+sigmaos-shell port-forward statuses
+sigmaos-shell port-forward on <id|label|localPort>
+sigmaos-shell port-forward off <id|label|localPort>
+sigmaos-shell port-forward toggleForward <id|label|localPort>
 ```
 
 `on` is "ensure running": it leaves an already-active tunnel alone.
