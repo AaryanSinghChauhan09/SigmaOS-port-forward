@@ -137,3 +137,8 @@ omarchy-shell port-forward toggleForward <id|label|localPort>
 - `manifest.json` — plugin manifest (`kind: bar-widget`, entry `Panel.qml`)
 - `Panel.qml` — bar button + popup panel, list rows, add/edit form, keyboard nav
 - `Service.qml` — systemd unit lifecycle, status polling/reconcile, JSON persistence
+## Documentation
+
+Wiki documentation is available in the SigmaOS Wiki Staging repository:
+
+- [SigmaOS Wiki Staging](https://github.com/AaryanSinghChauhan09/sigmaos-wiki-staging#SigmaOS-port-forward) - Full Wiki documentation for all SigmaOS components
