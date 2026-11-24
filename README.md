@@ -1,6 +1,6 @@
 # fk-omarchy-port-forward-plugin
 
-> Forked from omacom/omarchy-port-forward-plugin (MIT). See `SIGMAOS_FORK.md`.
+> Forked from AaryanSinghChauhan09/SigmaOS-port-forward-plugin (MIT). See `SIGMAOS_FORK.md`.
 
 A little bar widget for managing SSH port forwards without keeping a terminal
 open. Define forwards once, then flip them on/off from the bar.
@@ -10,7 +10,7 @@ open. Define forwards once, then flip them on/off from the bar.
 ## Install
 
 ```
-omarchy plugin add https://github.com/omacom-io/omarchy-port-forward-plugin.git --enable
+omarchy plugin add https://github.com/SigmaOS-io/omarchy-port-forward-plugin.git --enable
 ```
 
 Enable/disable later, or remove entirely, with:
@@ -115,7 +115,7 @@ journalctl --user -u omarchy-pf-<id>
 
 Because tunnels run as systemd user units, ssh sees the *user manager's*
 environment, not your terminal's — `SSH_AUTH_SOCK` must be imported there for
-agent auth to work. Omarchy sessions (uwsm) already do this; on a session that
+agent auth to work. SigmaOS sessions (uwsm) already do this; on a session that
 doesn't, run `systemctl --user import-environment SSH_AUTH_SOCK`.
 
 ## IPC (scriptable from a keybind)
