@@ -10,15 +10,15 @@ open. Define forwards once, then flip them on/off from the bar.
 ## Install
 
 ```
-omarchy plugin add https://github.com/SigmaOS-io/sigmaos-port-forward-plugin.git --enable
+sigmaos plugin add https://github.com/SigmaOS-io/sigmaos-port-forward-plugin.git --enable
 ```
 
 Enable/disable later, or remove entirely, with:
 
 ```
-omarchy plugin enable port-forward --section right
-omarchy plugin disable port-forward
-omarchy plugin remove port-forward
+sigmaos plugin enable port-forward --section right
+sigmaos plugin disable port-forward
+sigmaos plugin remove port-forward
 ```
 
 Each tunnel runs inside a **transient systemd user service**
